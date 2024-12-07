@@ -1,0 +1,1 @@
+python testSim.py | tee ./powershellLogs/log.txt
