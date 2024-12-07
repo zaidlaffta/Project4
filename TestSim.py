@@ -1,7 +1,3 @@
-#ANDES Lab - University of California, Merced
-#Author: UCM ANDES Lab
-#$Author: abeltran2 $
-#$LastChangedDate: 2014-08-31 16:06:26 -0700 (Sun, 31 Aug 2014) $
 #! /usr/bin/python
 import sys
 from TOSSIM import *
@@ -184,23 +180,23 @@ def main():
     #s.addChannel(s.COMMAND_CHANNEL);
     #s.addChannel(s.GENERAL_CHANNEL);
     s.addChannel(s.CHAT_CHANNEL);
-    #s.addChannel(s.FLOODING_CHANNEL);
-    #s.addChannel(s.ROUTING_CHANNEL);
-    #s.addChannel(s.TRANSPORT_CHANNEL);
-    #s.addChannel(s.DEBUG_CHANNEL);
-    #s.addChannel(s.NEIGHBOR_CHANNEL);
+   
 
-  
+
+    
+
+    
+    # Notes: Server Node[1] | ralwar Node[2] | rpatroo Node[3]
     s.runTime(100);
     s.createServer(1,41); #initating server at node[1] and binding to port[41]
     s.runTime(10);
     s.serverConnection("hello Zaid 3\r\n",3,2); #clientPort [3] no longer being used, need to remove it
     s.runTime(100);
-    s.serverConnection("hello Hello Back to you from AI 21\r\n",21,3); #clientPort [21] no longer being used, need to remove it
+    s.serverConnection("hello Jothi 21\r\n",21,3); #clientPort [21] no longer being used, need to remove it
     s.runTime(100);
     s.serverConnection("msg everyone\r\n",0,2); #clientPort [21] no longer being used, need to remove it
     s.runTime(100);
-    s.serverConnection("whisper Zaid Hi!\r\n",0,2); #clientPort [0] no longer being used, need to remove it
+    s.serverConnection("whisper Jothi Hi!\r\n",0,2); #clientPort [0] no longer being used, need to remove it
     s.runTime(100);
     s.serverConnection("listusr\r\n",3,2); #clientPort [3] no longer being used, can delete it
     s.runTime(1000);
